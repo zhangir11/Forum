@@ -1,0 +1,5 @@
+{
+    "port" : "8088",
+    "typedb" : "sql",
+    "namedb" : "forum.db"
+}

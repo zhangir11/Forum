@@ -1,0 +1,242 @@
+2022/02/10 00:32:22 http: panic serving [::1]:44078: runtime error: invalid memory address or nil pointer dereference
+goroutine 5 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1802 +0xb9
+panic({0x8069c0, 0xaf6010})
+	/usr/local/go/src/runtime/panic.go:1047 +0x266
+forum/internal/mainpage.MainPage({0x8d68f0, 0xc0000ac000}, 0x64af25, 0x0)
+	/home/zhangir/Desktop/audit/forum/internal/mainpage/mpage.go:31 +0x103
+forum/internal/BaseLogic.Middleware.func1({0x8d68f0, 0xc0000ac000}, 0x0)
+	/home/zhangir/Desktop/audit/forum/internal/BaseLogic/middleware.go:20 +0xb1
+net/http.HandlerFunc.ServeHTTP(0x0, {0x8d68f0, 0xc0000ac000}, 0x0)
+	/usr/local/go/src/net/http/server.go:2047 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0, {0x8d68f0, 0xc0000ac000}, 0xc0001d6000)
+	/usr/local/go/src/net/http/server.go:2425 +0x149
+net/http.serverHandler.ServeHTTP({0xc0001099b0}, {0x8d68f0, 0xc0000ac000}, 0xc0001d6000)
+	/usr/local/go/src/net/http/server.go:2879 +0x43b
+net/http.(*conn).serve(0xc00011fae0, {0x8d8500, 0xc0001098c0})
+	/usr/local/go/src/net/http/server.go:1930 +0xb08
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3034 +0x4e8
+2022/02/10 00:32:22 http: panic serving [::1]:44080: runtime error: invalid memory address or nil pointer dereference
+goroutine 6 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1802 +0xb9
+panic({0x8069c0, 0xaf6010})
+	/usr/local/go/src/runtime/panic.go:1047 +0x266
+forum/internal/mainpage.MainPage({0x8d68f0, 0xc00021c000}, 0x64af25, 0x0)
+	/home/zhangir/Desktop/audit/forum/internal/mainpage/mpage.go:31 +0x103
+forum/internal/BaseLogic.Middleware.func1({0x8d68f0, 0xc00021c000}, 0x0)
+	/home/zhangir/Desktop/audit/forum/internal/BaseLogic/middleware.go:20 +0xb1
+net/http.HandlerFunc.ServeHTTP(0x0, {0x8d68f0, 0xc00021c000}, 0x0)
+	/usr/local/go/src/net/http/server.go:2047 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0, {0x8d68f0, 0xc00021c000}, 0xc0001d6100)
+	/usr/local/go/src/net/http/server.go:2425 +0x149
+net/http.serverHandler.ServeHTTP({0xc000109ad0}, {0x8d68f0, 0xc00021c000}, 0xc0001d6100)
+	/usr/local/go/src/net/http/server.go:2879 +0x43b
+net/http.(*conn).serve(0xc00011fb80, {0x8d8500, 0xc0001098c0})
+	/usr/local/go/src/net/http/server.go:1930 +0xb08
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3034 +0x4e8
+2022/02/10 00:32:22 http: panic serving [::1]:44084: runtime error: invalid memory address or nil pointer dereference
+goroutine 7 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1802 +0xb9
+panic({0x8069c0, 0xaf6010})
+	/usr/local/go/src/runtime/panic.go:1047 +0x266
+forum/internal/mainpage.MainPage({0x8d68f0, 0xc00018c0e0}, 0x64af25, 0x0)
+	/home/zhangir/Desktop/audit/forum/internal/mainpage/mpage.go:31 +0x103
+forum/internal/BaseLogic.Middleware.func1({0x8d68f0, 0xc00018c0e0}, 0x0)
+	/home/zhangir/Desktop/audit/forum/internal/BaseLogic/middleware.go:20 +0xb1
+net/http.HandlerFunc.ServeHTTP(0x0, {0x8d68f0, 0xc00018c0e0}, 0x0)
+	/usr/local/go/src/net/http/server.go:2047 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0, {0x8d68f0, 0xc00018c0e0}, 0xc0001d6200)
+	/usr/local/go/src/net/http/server.go:2425 +0x149
+net/http.serverHandler.ServeHTTP({0xc000109bc0}, {0x8d68f0, 0xc00018c0e0}, 0xc0001d6200)
+	/usr/local/go/src/net/http/server.go:2879 +0x43b
+net/http.(*conn).serve(0xc00011fc20, {0x8d8500, 0xc0001098c0})
+	/usr/local/go/src/net/http/server.go:1930 +0xb08
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3034 +0x4e8
+2022/02/10 00:32:23 http: panic serving [::1]:44086: runtime error: invalid memory address or nil pointer dereference
+goroutine 25 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1802 +0xb9
+panic({0x8069c0, 0xaf6010})
+	/usr/local/go/src/runtime/panic.go:1047 +0x266
+forum/internal/mainpage.MainPage({0x8d68f0, 0xc0000ac0e0}, 0x64af25, 0x0)
+	/home/zhangir/Desktop/audit/forum/internal/mainpage/mpage.go:31 +0x103
+forum/internal/BaseLogic.Middleware.func1({0x8d68f0, 0xc0000ac0e0}, 0x0)
+	/home/zhangir/Desktop/audit/forum/internal/BaseLogic/middleware.go:20 +0xb1
+net/http.HandlerFunc.ServeHTTP(0x0, {0x8d68f0, 0xc0000ac0e0}, 0x0)
+	/usr/local/go/src/net/http/server.go:2047 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0, {0x8d68f0, 0xc0000ac0e0}, 0xc0000d2200)
+	/usr/local/go/src/net/http/server.go:2425 +0x149
+net/http.serverHandler.ServeHTTP({0xc00009d710}, {0x8d68f0, 0xc0000ac0e0}, 0xc0000d2200)
+	/usr/local/go/src/net/http/server.go:2879 +0x43b
+net/http.(*conn).serve(0xc000290000, {0x8d8500, 0xc0001098c0})
+	/usr/local/go/src/net/http/server.go:1930 +0xb08
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3034 +0x4e8
+2022/02/10 00:32:23 http: panic serving [::1]:44088: runtime error: invalid memory address or nil pointer dereference
+goroutine 26 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1802 +0xb9
+panic({0x8069c0, 0xaf6010})
+	/usr/local/go/src/runtime/panic.go:1047 +0x266
+forum/internal/mainpage.MainPage({0x8d68f0, 0xc00021c0e0}, 0x64af25, 0x0)
+	/home/zhangir/Desktop/audit/forum/internal/mainpage/mpage.go:31 +0x103
+forum/internal/BaseLogic.Middleware.func1({0x8d68f0, 0xc00021c0e0}, 0x0)
+	/home/zhangir/Desktop/audit/forum/internal/BaseLogic/middleware.go:20 +0xb1
+net/http.HandlerFunc.ServeHTTP(0x0, {0x8d68f0, 0xc00021c0e0}, 0x0)
+	/usr/local/go/src/net/http/server.go:2047 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0, {0x8d68f0, 0xc00021c0e0}, 0xc0000d2100)
+	/usr/local/go/src/net/http/server.go:2425 +0x149
+net/http.serverHandler.ServeHTTP({0xc00009d6b0}, {0x8d68f0, 0xc00021c0e0}, 0xc0000d2100)
+	/usr/local/go/src/net/http/server.go:2879 +0x43b
+net/http.(*conn).serve(0xc0002900a0, {0x8d8500, 0xc0001098c0})
+	/usr/local/go/src/net/http/server.go:1930 +0xb08
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3034 +0x4e8
+2022/02/10 00:32:23 http: panic serving [::1]:44090: runtime error: invalid memory address or nil pointer dereference
+goroutine 43 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1802 +0xb9
+panic({0x8069c0, 0xaf6010})
+	/usr/local/go/src/runtime/panic.go:1047 +0x266
+forum/internal/mainpage.MainPage({0x8d68f0, 0xc00018c1c0}, 0x64af25, 0x0)
+	/home/zhangir/Desktop/audit/forum/internal/mainpage/mpage.go:31 +0x103
+forum/internal/BaseLogic.Middleware.func1({0x8d68f0, 0xc00018c1c0}, 0x0)
+	/home/zhangir/Desktop/audit/forum/internal/BaseLogic/middleware.go:20 +0xb1
+net/http.HandlerFunc.ServeHTTP(0x0, {0x8d68f0, 0xc00018c1c0}, 0x0)
+	/usr/local/go/src/net/http/server.go:2047 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0, {0x8d68f0, 0xc00018c1c0}, 0xc0001d6500)
+	/usr/local/go/src/net/http/server.go:2425 +0x149
+net/http.serverHandler.ServeHTTP({0xc0001e5020}, {0x8d68f0, 0xc00018c1c0}, 0xc0001d6500)
+	/usr/local/go/src/net/http/server.go:2879 +0x43b
+net/http.(*conn).serve(0xc000322000, {0x8d8500, 0xc0001098c0})
+	/usr/local/go/src/net/http/server.go:1930 +0xb08
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3034 +0x4e8
+2022/02/10 00:32:28 http: panic serving [::1]:44092: runtime error: invalid memory address or nil pointer dereference
+goroutine 29 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1802 +0xb9
+panic({0x8069c0, 0xaf6010})
+	/usr/local/go/src/runtime/panic.go:1047 +0x266
+forum/internal/mainpage.MainPage({0x8d68f0, 0xc00018c2a0}, 0x64af25, 0x0)
+	/home/zhangir/Desktop/audit/forum/internal/mainpage/mpage.go:31 +0x103
+forum/internal/BaseLogic.Middleware.func1({0x8d68f0, 0xc00018c2a0}, 0x0)
+	/home/zhangir/Desktop/audit/forum/internal/BaseLogic/middleware.go:20 +0xb1
+net/http.HandlerFunc.ServeHTTP(0x0, {0x8d68f0, 0xc00018c2a0}, 0x0)
+	/usr/local/go/src/net/http/server.go:2047 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0, {0x8d68f0, 0xc00018c2a0}, 0xc0000d2500)
+	/usr/local/go/src/net/http/server.go:2425 +0x149
+net/http.serverHandler.ServeHTTP({0xc0002942a0}, {0x8d68f0, 0xc00018c2a0}, 0xc0000d2500)
+	/usr/local/go/src/net/http/server.go:2879 +0x43b
+net/http.(*conn).serve(0xc000290140, {0x8d8500, 0xc0001098c0})
+	/usr/local/go/src/net/http/server.go:1930 +0xb08
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3034 +0x4e8
+2022/02/10 00:32:28 http: panic serving [::1]:44094: runtime error: invalid memory address or nil pointer dereference
+goroutine 16 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1802 +0xb9
+panic({0x8069c0, 0xaf6010})
+	/usr/local/go/src/runtime/panic.go:1047 +0x266
+forum/internal/mainpage.MainPage({0x8d68f0, 0xc00018c380}, 0x64af25, 0x0)
+	/home/zhangir/Desktop/audit/forum/internal/mainpage/mpage.go:31 +0x103
+forum/internal/BaseLogic.Middleware.func1({0x8d68f0, 0xc00018c380}, 0x0)
+	/home/zhangir/Desktop/audit/forum/internal/BaseLogic/middleware.go:20 +0xb1
+net/http.HandlerFunc.ServeHTTP(0x0, {0x8d68f0, 0xc00018c380}, 0x0)
+	/usr/local/go/src/net/http/server.go:2047 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0, {0x8d68f0, 0xc00018c380}, 0xc0001d6800)
+	/usr/local/go/src/net/http/server.go:2425 +0x149
+net/http.serverHandler.ServeHTTP({0xc0001fa4b0}, {0x8d68f0, 0xc00018c380}, 0xc0001d6800)
+	/usr/local/go/src/net/http/server.go:2879 +0x43b
+net/http.(*conn).serve(0xc00011fcc0, {0x8d8500, 0xc0001098c0})
+	/usr/local/go/src/net/http/server.go:1930 +0xb08
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3034 +0x4e8
+2022/02/10 00:32:28 http: panic serving [::1]:44098: runtime error: invalid memory address or nil pointer dereference
+goroutine 32 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1802 +0xb9
+panic({0x8069c0, 0xaf6010})
+	/usr/local/go/src/runtime/panic.go:1047 +0x266
+forum/internal/mainpage.MainPage({0x8d68f0, 0xc00018c460}, 0x64af25, 0x0)
+	/home/zhangir/Desktop/audit/forum/internal/mainpage/mpage.go:31 +0x103
+forum/internal/BaseLogic.Middleware.func1({0x8d68f0, 0xc00018c460}, 0x0)
+	/home/zhangir/Desktop/audit/forum/internal/BaseLogic/middleware.go:20 +0xb1
+net/http.HandlerFunc.ServeHTTP(0x0, {0x8d68f0, 0xc00018c460}, 0x0)
+	/usr/local/go/src/net/http/server.go:2047 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0, {0x8d68f0, 0xc00018c460}, 0xc0000d2600)
+	/usr/local/go/src/net/http/server.go:2425 +0x149
+net/http.serverHandler.ServeHTTP({0xc000294c90}, {0x8d68f0, 0xc00018c460}, 0xc0000d2600)
+	/usr/local/go/src/net/http/server.go:2879 +0x43b
+net/http.(*conn).serve(0xc0002901e0, {0x8d8500, 0xc0001098c0})
+	/usr/local/go/src/net/http/server.go:1930 +0xb08
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3034 +0x4e8
+2022/02/10 00:32:58 http: panic serving [::1]:44100: runtime error: invalid memory address or nil pointer dereference
+goroutine 33 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1802 +0xb9
+panic({0x8069c0, 0xaf6010})
+	/usr/local/go/src/runtime/panic.go:1047 +0x266
+forum/internal/mainpage.MainPage({0x8d68f0, 0xc00018c540}, 0x64af25, 0x0)
+	/home/zhangir/Desktop/audit/forum/internal/mainpage/mpage.go:31 +0x103
+forum/internal/BaseLogic.Middleware.func1({0x8d68f0, 0xc00018c540}, 0x0)
+	/home/zhangir/Desktop/audit/forum/internal/BaseLogic/middleware.go:20 +0xb1
+net/http.HandlerFunc.ServeHTTP(0x0, {0x8d68f0, 0xc00018c540}, 0x0)
+	/usr/local/go/src/net/http/server.go:2047 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0, {0x8d68f0, 0xc00018c540}, 0xc0001d6f00)
+	/usr/local/go/src/net/http/server.go:2425 +0x149
+net/http.serverHandler.ServeHTTP({0xc0003a57a0}, {0x8d68f0, 0xc00018c540}, 0xc0001d6f00)
+	/usr/local/go/src/net/http/server.go:2879 +0x43b
+net/http.(*conn).serve(0xc000290280, {0x8d8500, 0xc0001098c0})
+	/usr/local/go/src/net/http/server.go:1930 +0xb08
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3034 +0x4e8
+2022/02/10 00:32:58 http: panic serving [::1]:44102: runtime error: invalid memory address or nil pointer dereference
+goroutine 66 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1802 +0xb9
+panic({0x8069c0, 0xaf6010})
+	/usr/local/go/src/runtime/panic.go:1047 +0x266
+forum/internal/mainpage.MainPage({0x8d68f0, 0xc00018c620}, 0x64af25, 0x0)
+	/home/zhangir/Desktop/audit/forum/internal/mainpage/mpage.go:31 +0x103
+forum/internal/BaseLogic.Middleware.func1({0x8d68f0, 0xc00018c620}, 0x0)
+	/home/zhangir/Desktop/audit/forum/internal/BaseLogic/middleware.go:20 +0xb1
+net/http.HandlerFunc.ServeHTTP(0x0, {0x8d68f0, 0xc00018c620}, 0x0)
+	/usr/local/go/src/net/http/server.go:2047 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0, {0x8d68f0, 0xc00018c620}, 0xc0000d2700)
+	/usr/local/go/src/net/http/server.go:2425 +0x149
+net/http.serverHandler.ServeHTTP({0xc000294db0}, {0x8d68f0, 0xc00018c620}, 0xc0000d2700)
+	/usr/local/go/src/net/http/server.go:2879 +0x43b
+net/http.(*conn).serve(0xc000290320, {0x8d8500, 0xc0001098c0})
+	/usr/local/go/src/net/http/server.go:1930 +0xb08
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3034 +0x4e8
+2022/02/10 00:32:58 http: panic serving [::1]:44104: runtime error: invalid memory address or nil pointer dereference
+goroutine 47 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1802 +0xb9
+panic({0x8069c0, 0xaf6010})
+	/usr/local/go/src/runtime/panic.go:1047 +0x266
+forum/internal/mainpage.MainPage({0x8d68f0, 0xc00021c1c0}, 0x64af25, 0x0)
+	/home/zhangir/Desktop/audit/forum/internal/mainpage/mpage.go:31 +0x103
+forum/internal/BaseLogic.Middleware.func1({0x8d68f0, 0xc00021c1c0}, 0x0)
+	/home/zhangir/Desktop/audit/forum/internal/BaseLogic/middleware.go:20 +0xb1
+net/http.HandlerFunc.ServeHTTP(0x0, {0x8d68f0, 0xc00021c1c0}, 0x0)
+	/usr/local/go/src/net/http/server.go:2047 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0, {0x8d68f0, 0xc00021c1c0}, 0xc000254400)
+	/usr/local/go/src/net/http/server.go:2425 +0x149
+net/http.serverHandler.ServeHTTP({0xc00032a690}, {0x8d68f0, 0xc00021c1c0}, 0xc000254400)
+	/usr/local/go/src/net/http/server.go:2879 +0x43b
+net/http.(*conn).serve(0xc0003220a0, {0x8d8500, 0xc0001098c0})
+	/usr/local/go/src/net/http/server.go:1930 +0xb08
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3034 +0x4e8
+2022/02/10 00:40:55 UNIQUE constraint failed: Users.username Signig Up
+2022/02/10 00:41:17 UNIQUE constraint failed: Users.username Signig Up

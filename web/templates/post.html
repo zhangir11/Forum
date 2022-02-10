@@ -1,0 +1,102 @@
+
+  {{template "navbar" .}}
+  {{$auth := .Authenticated}}
+  <div class="container">
+    <div class="container">
+      <h1 class="display-4">{{ .Post.Title }}</h1>
+      <p>Threads : {{ range .Post.Threads }} <a href="tags?name={{ .Name}}"> #{{ .Name}} </a>{{ end }}</p>
+
+      <table class="table table-hover">
+        <tbody class="card">
+          <tr>
+            <td class="card-header">
+              <h4 class="my-0 font-weight-normal">Author : {{ .Post.Author }}</h4>
+            </td>
+          </tr>
+          <tr>
+            <td style="max-width: 100%;">
+              <div class="text-break">
+                {{ .Post.Content }}
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div style="display:flex; flex-wrap: wrap; gap:5px;">
+                {{if $auth}}
+                <form action="" method="POST">
+                  <button class="btn btn-primary" type="submit" name="submit" value="like">Like</button><a>{{ .Post.PostRate.LikeCount}}</a>
+                  <button class="btn btn-primary" type="submit" name="submit"
+                    value="dislike">Dislike</button><a>{{ .Post.PostRate.DislikeCount}}</a>
+                </form>
+                {{else}}
+                <a>Likes : {{ .Post.PostRate.LikeCount}}   </a>
+                <a>Dislikes : {{ .Post.PostRate.DislikeCount}}</a>
+                {{end}}
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br>
+    <div class="container">
+      <table class="table table-hover">
+        {{$auth := .Authenticated}}
+        <tbody class="card">
+          {{$id := .UserID}}
+          <tr>
+            <td class="card-header">
+              <h4 class="my-0 font-weight-normal">Comments:</h4>
+            </td>
+          </tr>
+          {{range .Comments}}
+          <tr>
+            <td>
+              <b>{{.AuthorName}}</b> {{.CreationDate}}<br>
+              <div class="text-break">
+                {{ .Content }}
+              </div>
+              Likes {{ .Rating.LikeCount }}
+              <br>
+              Dislike {{ .Rating.DislikeCount }}
+              <br>
+              {{if $auth}}
+              <a class="btn btn-primary" name="commentmark"
+                href="http://localhost:8088/rate?coment_id={{ .ID }}">Like</a>
+              <a class="btn btn-primary" name="commentmark"
+                href="http://localhost:8088/rate?coment_id=-{{ .ID }}">Dislike</a>
+              {{end}}
+            </td>
+          </tr>
+          {{end}}
+          </tr>
+          {{if .Authenticated}}
+
+          <tr>
+            <td>
+              Add a comment: <br>
+              <form action="/createcomment?id={{ .Post.ID }}" method="POST">
+                <textarea type="text" style="height:100px;" class="form-95" name="aComment" required></textarea>
+                <br> <br>
+                <button class="btn btn-primary" type="submit">Submit</button>
+              </form>
+            </td>
+          </tr>
+          {{else}}
+          <tr>
+            <td>
+              <h4>You have to be a registered user to leave comments</h4>
+            </td>
+          </tr>
+          {{end}}
+        </tbody>
+      </table>
+
+    </div>
+    <!-- <img src="/media/image1.jpg"> -->
+  </div>
+  {{template "footer" .}}
+</body>
+
+</html>

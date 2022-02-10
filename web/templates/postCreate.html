@@ -1,0 +1,33 @@
+{{template "navbar" .PostData}}
+<section class="section">
+   <div class="container">
+    <div class="post">
+        <h1>Post Creation Workshop</h1>
+        <form class="form" action="/create" method="POST">
+            <div>
+                <label>Category</label>
+                <input type="text" name="thread" placeholder="E.g.: music, art ...">
+                {{ if .Err.Category }}
+                <p class="empty">{{ .Err.Category }}</p>
+                {{ end }}
+                <label for="title">Title</label>
+                <input type="text" name="title">
+                {{ if .Err.Title }}
+                <p class="empty">{{ .Err.Title }}</p>
+                {{ end }}
+            </div>
+            <div>
+                <textarea class="textarea" name="postContent" placeholder="What's new?"></textarea>
+                {{ if .Err.Content }}
+                <p class="empty">{{ .Err.Content }}</p>
+                {{ end }}
+                <button class="btn" type="submit">Post</button>  
+            </div>
+        </form>
+    </div>
+    </div>
+</section>
+{{template "footer" .}}
+</main>
+</body>
+</html>

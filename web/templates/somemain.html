@@ -1,0 +1,43 @@
+{{template "navbar" .}}
+        {{ $auth := .Authenticated}}
+        <!-- Marketing messaging and featurettes
+  ================================================== -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+
+        <div class="container marketing">
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+                {{ range .Posts}}
+                <div class="col-lg-4" style="border: 5px solid;border-radius: 10px/20px;">
+                    <h2>{{ .Title}}</h2>
+                    <h5>Categories:{{ range .Threads }}<a href="tags?name={{ .Name}}"> #{{ .Name}}{{end}}</a></h5>
+                    <p>{{ .Content}}</p>
+                    <p>Author :{{ .Author}}</p>
+                    <div class="col-lg-4">
+                        <a class="btn btn-secondary" {{ if $auth }} href="/rate?post_id={{.ID}}" {{ end }}>Like</a>
+                        <span class="like_num">{{.PostRate.LikeCount}}</span>
+                    </div>
+                    <div class="col-lg-4">
+                        <a class="btn btn-secondary" {{ if $auth }} href="/rate?post_id=-{{.ID}}" {{ end }}>Dislike</a>
+                        <span class="dislike_num"> {{.PostRate.DislikeCount}}</span>
+                    </div>
+                    <p><a class="btn btn-secondary" href="/post?id={{ .ID}}"> Join to discuss &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+                {{ end }}
+            </div><!-- /.row -->
+
+
+            {{template "footer" .}}
+
+    </main>
+
+
+    <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
