@@ -11,6 +11,7 @@ import (
 	"forum/internal/mypostpage"
 	"forum/internal/post"
 	"forum/internal/signupin"
+	"forum/internal/testingauthgoogle"
 	"forum/pkg/sserver"
 	"net/http"
 )
@@ -23,6 +24,7 @@ var (
 
 // Start - Initializing server
 func Start(s *sserver.Server) error {
+	testingauthgoogle.Init()
 	sserver.DeclareServak(s)
 	if s == nil {
 		return errors.New("error: server is nil")
@@ -30,6 +32,8 @@ func Start(s *sserver.Server) error {
 	multiHandlerer := http.NewServeMux()
 	fmt.Println("Server is working on port " + s.WebPort)
 	fmt.Println("http://localhost:" + s.WebPort + "/")
+	multiHandlerer.Handle("/testgoogle", smth(testingauthgoogle.HandleGoogleLogin))
+	multiHandlerer.Handle("/callback", smth(testingauthgoogle.HandleGoogleCallback))
 	multiHandlerer.Handle("/likedposts", Middleware(likedposts.ShowLovely, AuthIsRequired))
 	multiHandlerer.Handle("/tags", Middleware(filterbythread.FilterByThread, AuthIsIrrelevant))
 	multiHandlerer.Handle("/myposts", Middleware(mypostpage.MyPostPage, AuthIsRequired))
@@ -47,4 +51,10 @@ func Start(s *sserver.Server) error {
 
 	return http.ListenAndServe(":"+s.WebPort, multiHandlerer)
 
+}
+
+func smth(f func(http.ResponseWriter, *http.Request)) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		f(w, r)
+	}
 }
